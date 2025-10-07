@@ -92,10 +92,3 @@ print(fi)
 
 
 
-
-
-# cm = confusion_matrix(y_test, y_pred_lr)
-# cm_df = pd.DataFrame(cm, index=class_names, columns=class_names)
-# print("\nConfusion matrix:")
-
-# print(cm_df)
