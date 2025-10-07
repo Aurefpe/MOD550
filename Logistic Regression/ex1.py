@@ -48,19 +48,3 @@ cm_df = pd.DataFrame(cm, index=class_names, columns=class_names)
 print("\nConfusion matrix:")
 print(cm_df)
 
-
-#%% training for logistic regression
-lr= LogisticRegression( random_state=RSEED,    n_jobs=-1)
-
-# Fit & predict
-lr.fit(X_train, y_train)
-y_pred_lr = lr.predict(X_test)
-
-# Metrics
-acc_lr = accuracy_score(y_test, y_pred_lr)
-print(f"\nAccuracy_lr: {acc_lr:.3f}")
-
-cm = confusion_matrix(y_test, y_pred_lr)
-cm_df = pd.DataFrame(cm, index=class_names, columns=class_names)
-print("\nConfusion matrix:")
-print(cm_df)
