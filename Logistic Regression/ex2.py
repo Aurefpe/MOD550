@@ -86,45 +86,16 @@ print(fi)
 
 
 
-#%% training for logistic regression
-lr= LogisticRegression( random_state=RSEED, max_iter=100,   n_jobs=-1)
-
-# Fit & predict
 
 
 
-lr.fit(x_train, y_train)
-y_pred_lr = lr.predict(x_test)
-
-# Metrics
-acc_lr = accuracy_score(y_test, y_pred_lr)
-print(f"\nAccuracy_lr: {acc_lr:.3f}")
-
-cm = confusion_matrix(y_test, y_pred_lr)
-cm_df = pd.DataFrame(cm, index=class_names, columns=class_names)
-print("\nConfusion matrix:")
-print(cm_df)
 
 
-#%%
-# lr= LogisticRegression( random_state=RSEED,  max_iter=1000,   n_jobs=-1)
-
-# # Fit & predict
-
-# X_train, X_test, y_train, y_test = train_test_split(features, class_target, test_size=0.3, random_state=42)
-# scaler = StandardScaler()
-# X_train_scaled = scaler.fit_transform(X_train)
-# X_test_scaled = scaler.transform(X_test)
 
 
-# lr.fit(X_train_scaled, y_train)
-# y_pred_lr = lr.predict(X_test_scaled)
-
-# # Metrics
-# acc_lr = accuracy_score(y_test, y_pred_lr)
-# print(f"\nAccuracy_lr: {acc_lr:.3f}")
 
 # cm = confusion_matrix(y_test, y_pred_lr)
 # cm_df = pd.DataFrame(cm, index=class_names, columns=class_names)
 # print("\nConfusion matrix:")
+
 # print(cm_df)
